@@ -1,6 +1,3 @@
-import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA 
-from sklearn.manifold import TSNE 
 from utils import *
 from page import show_page
 import streamlit as st
