@@ -37,26 +37,26 @@ def standardization(X_train, X_test):
     return X_train, X_test
 
 # In Progress
-def filter_data(X_train, X_test):
-    """_summary_
+# def filter_data(X_train, X_test):
+#     """_summary_
 
-    Args:
-        model (_type_): _description_
-        X_train (_type_): _description_
-        X_test (_type_): _description_
-    Return:
-        tuple(filtered_X_train, filtered_X_test)
-    """
+#     Args:
+#         model (_type_): _description_
+#         X_train (_type_): _description_
+#         X_test (_type_): _description_
+#     Return:
+#         tuple(filtered_X_train, filtered_X_test)
+#     """
     
-    weighs_num = model.coef_.shape[1]
-    weighs = model.coef_
-    indexes = []
-    for i in range(weighs_num):
-        if abs(weighs[0][i])<0.1:
-            indexes.append(i)
-    filtered_X_train = np.delete(X_train, indexes, axis=1)
-    filtered_X_test = np.delete(X_test, indexes, axis=1)
-    return filtered_X_train, filtered_X_test
+#     weighs_num = model.coef_.shape[1]
+#     weighs = model.coef_
+#     indexes = []
+#     for i in range(weighs_num):
+#         if abs(weighs[0][i])<0.1:
+#             indexes.append(i)
+#     filtered_X_train = np.delete(X_train, indexes, axis=1)
+#     filtered_X_test = np.delete(X_test, indexes, axis=1)
+#     return filtered_X_train, filtered_X_test
 
 def perform_reduction(reduction_method, X_test):
     if reduction_method == "PCA":
