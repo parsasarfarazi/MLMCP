@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 
 page = st.sidebar.radio("Select a Model", ["Logistic Regression", "Decision Tree", "Random Forest", "Neural Network"])
 
-X_train, X_test, y_train, y_test = loadong_data("src/spambase.data")
+X_train, X_test, y_train, y_test = loadong_data("data/spambase.data")
 X_train, X_test = standardization(X_train, X_test)
 
 if page == "Logistic Regression":
